@@ -1,0 +1,116 @@
+/* Basic reset */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; }
+
+/* Page background */
+body {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, #ffffff 0%, #ffd6e0 100%);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #333;
+  padding: 24px;
+}
+
+/* Card container */
+.container {
+  width: 92%;
+  max-width: 560px;
+  background: #fff;
+  padding: 40px 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(12,16,25,0.12);
+  text-align: center;
+  position: relative;
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+/* Hidden helper */
+.hidden { display: none; }
+
+/* Question styles */
+#question {
+  font-family: 'Anton', sans-serif; /* protest-style bold font */
+  margin: 0 0 28px 0;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: 0.18rem;
+  text-align: center;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.22);
+  line-height: 1;
+}
+
+/* small spacer span for spaces */
+#question .sp { width: 0.6rem; display:inline-block; }
+
+/* each letter hover effect */
+#question span {
+  display:inline-block;
+  transition: transform 0.18s ease;
+  margin-right: 2px;
+}
+#question span:hover {
+  transform: translateY(-6px) scale(1.12) rotate(-4deg);
+}
+
+/* Buttons area */
+.buttons {
+  position: relative;
+  height: 180px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Buttons style */
+.btn {
+  position: absolute;
+  padding: 16px 48px; /* longer buttons */
+  font-size: 1.2rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: left .12s linear, top .12s linear, transform .12s ease, background .25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  font-weight: 700;
+}
+
+/* Yes button */
+.yes {
+  left: 72px;
+  top: 52px;
+  background: linear-gradient(135deg,#ff7bb0,#ff4b8b);
+  color: #fff;
+  z-index: 30;
+}
+.yes:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+/* No button */
+.no {
+  left: 300px;
+  top: 52px;
+  background: linear-gradient(135deg,#cccccc,#888888);
+  color: #222;
+  z-index: 20;
+}
+.no:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+/* Answer card */
+.heart { font-size: 2rem; margin-bottom: 12px; color: #e21b7a; }
+h2 { margin: 6px 0 12px; color: #e21b7a; }
+p { margin: 0; font-weight: 600; color: #333; }
+
+/* Responsive tweaks */
+@media (max-width:460px) {
+  .buttons { height: 140px; }
+  .yes { left: 36px; top: 44px; }
+  .no  { left: 210px; top: 44px; }
+  #question { letter-spacing: 0.06rem; }
+}

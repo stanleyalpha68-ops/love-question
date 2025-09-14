@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do you love me?</title>
+  <!-- Google Fonts: Prosto / or substitute with Anton if not available -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- question card -->
+  <div class="container" id="questionBox" aria-live="polite">
+    <h1 id="question" aria-label="Do you love me?">
+      <span style="color:#e21b7a">D</span>
+      <span style="color:#ff9800">o</span>
+      <span class="sp">&nbsp;</span>
+      <span style="color:#4caf50">y</span>
+      <span style="color:#2196f3">o</span>
+      <span style="color:#9c27b0">u</span>
+      <span class="sp">&nbsp;</span>
+      <span style="color:#ff5722">l</span>
+      <span style="color:#3f51b5">o</span>
+      <span style="color:#009688">v</span>
+      <span style="color:#e91e63">e</span>
+      <span class="sp">&nbsp;</span>
+      <span style="color:#795548">m</span>
+      <span style="color:#607d8b">e</span>
+      <span style="color:#8bc34a">?</span>
+    </h1>
+
+    <div class="buttons" id="buttonsArea" aria-hidden="false">
+      <button id="yesBtn" class="btn yes" aria-label="Yes">Yes</button>
+      <button id="noBtn" class="btn no" aria-label="No">No</button>
+    </div>
+  </div>
+
+  <!-- answer card (hidden initially) -->
+  <div class="container hidden" id="answerBox" aria-live="polite">
+    <div class="heart">❤️ I knew it ❤️</div>
+    <h2>Love you too 🥰</h2>
+    <p>Thanks for saying yes — you're the best!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
